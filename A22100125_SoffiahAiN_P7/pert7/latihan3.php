@@ -20,8 +20,6 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
       <th>NO</th>
       <th>NIM</th>
       <th>NAMA</th>
-      <th>JURUSAN</th>
-      <th>ALAMAT</th>
       <th>Aksi</th>
     </tr>
 
@@ -31,10 +29,8 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
         <td><?= $i++; ?></td>
         <td><?= $mhs['NIM']; ?></td>
         <td><?= $mhs['NAMA']; ?></td>
-        <td><?= $mhs['JURUSAN']; ?></td>
-        <td><?= $mhs['ALAMAT']; ?></td>
         <td>
-          <a href="">ubah</a> | <a href="">hapus</a>
+          <a href="detail.php?nim=<?= $mhs['NIM']; ?>">lihat detail</a>
         </td>
       </tr>
     <?php endforeach; ?>
