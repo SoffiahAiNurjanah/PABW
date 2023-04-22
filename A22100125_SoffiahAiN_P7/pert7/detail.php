@@ -4,7 +4,7 @@
   //  ambil id dari URL
   $id = $_GET['id'];
 
-  // query mahasiswa berdasarkan nim
+  // query mahasiswa berdasarkan id
   $mhs = query("SELECT * FROM mahasiswa WHERE id = $id");
 
   ?>
