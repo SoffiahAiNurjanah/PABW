@@ -1,11 +1,12 @@
  <?php
   require 'functions.php';
 
-  //  ambil nim dari URL
-  $nim = $_GET['nim'];
+  //  ambil id dari URL
+  $id = $_GET['id'];
 
   // query mahasiswa berdasarkan nim
-  $mahasiswa = query("SELECT * FROM mahasiswa WHERE NIM = $nim");
+  $mhs = query("SELECT * FROM mahasiswa WHERE id = $id");
+
   ?>
 
  <!DOCTYPE html>
@@ -21,10 +22,10 @@
  <body>
    <h3>Detail Mahasiswa</h3>
    <ul>
-     <li>NIM : <?= $mahasiswa['NIM']; ?></li>
-     <li>NAMA : <?= $mahasiswa['NAMA']; ?></li>
-     <li>JURUSAN : <?= $mahasiswa['JURUSAN']; ?></li>
-     <li>ALAMAT : <?= $mahasiswa['ALAMAT']; ?></li>
+     <li>NIM : <?= $mhs['NIM']; ?></li>
+     <li>NAMA : <?= $mhs['NAMA']; ?></li>
+     <li>JURUSAN : <?= $mhs['JURUSAN']; ?></li>
+     <li>ALAMAT : <?= $mhs['ALAMAT']; ?></li>
      <li><a href="">ubah</a> | <a href="">hapus</a></li>
      <li><a href="latihan3.php">Kembali ke daftar mahasiswa</a></li>
    </ul>

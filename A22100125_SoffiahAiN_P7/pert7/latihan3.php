@@ -30,7 +30,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
         <td><?= $mhs['NIM']; ?></td>
         <td><?= $mhs['NAMA']; ?></td>
         <td>
-          <a href="detail.php?nim=<?= $mhs['NIM']; ?>">lihat detail</a>
+          <a href="detail.php?id=<?= $mhs['id']; ?>">lihat detail</a>
         </td>
       </tr>
     <?php endforeach; ?>
