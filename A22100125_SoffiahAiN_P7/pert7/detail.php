@@ -5,7 +5,7 @@
   $id = $_GET['id'];
 
   // query mahasiswa berdasarkan id
-  $mhs = query("SELECT * FROM mahasiswa WHERE id = $id");
+  $mahasiswa = query("SELECT * FROM mahasiswa WHERE id = $id");
 
   ?>
 
